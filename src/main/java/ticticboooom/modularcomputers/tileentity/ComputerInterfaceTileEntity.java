@@ -8,6 +8,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
+import ticticboooom.modularcomputers.container.ComputerInterfaceContainer;
 import ticticboooom.modularcomputers.init.TileEntityTypes;
 
 import javax.annotation.Nullable;
@@ -26,6 +27,6 @@ public class ComputerInterfaceTileEntity extends TileEntity implements INamedCon
     @Nullable
     @Override
     public Container createMenu(int p_createMenu_1_, PlayerInventory p_createMenu_2_, PlayerEntity p_createMenu_3_) {
-        return null;
+        return new ComputerInterfaceContainer(p_createMenu_1_, p_createMenu_2_, this);
     }
 }
